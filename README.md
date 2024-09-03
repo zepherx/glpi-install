@@ -97,7 +97,7 @@ cat << EOF | sudo tee /etc/apache2/sites-available/glpi.conf
 	<Directory /var/www/glpi/public>
 		Require all granted
 		RewriteEngine On
-		- Redirect all requests to GLPI router, unless file exists.
+		# Redirect all requests to GLPI router, unless file exists.
 		RewriteCond %{REQUEST_FILENAME} !-f
 		RewriteRule ^(.*)$ index.php [QSA,L]
 	</Directory>
