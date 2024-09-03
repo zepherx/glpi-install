@@ -77,8 +77,8 @@ sudo a2dissite 000-default.conf
 
 - 2.8. Habilita session.cookie_httponly
 ```
-sudo sed -i 's/^session.cookie_httponly =/session.cookie_httponly = on/' /etc/php/8.1/apache2/php.ini && \
-	sudo sed -i 's/^;date.timezone =/date.timezone = America\/Sao_Paulo/' /etc/php/8.1/apache2/php.ini
+sudo sed -i 's/^session.cookie_httponly =/session.cookie_httponly = on/' /etc/php/8.3/apache2/php.ini && \
+	sudo sed -i 's/^;date.timezone =/date.timezone = America\/Sao_Paulo/' /etc/php/8.3/apache2/php.ini
 ```	
 
 - NOTA: Caso de algum erro, as vezes pode ser que a versão do PHP no caso 8.1 pode ter sido mudada, ai para poder localizar a pasta do php.ini, execute o comando abaixo:
@@ -122,7 +122,7 @@ sudo systemctl restart apache2
 
 - 2.13. Download do glpi
 ```
-wget -q https://github.com/glpi-project/glpi/releases/download/10.0.7/glpi-10.0.7.tgz
+wget -q https://github.com/glpi-project/glpi/releases/download/10.0.16/glpi-10.0.16.tgz
 ```
 
 - 2.14. Descompactar a pasta do GLPI
